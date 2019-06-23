@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainMasterPage.master.cs" Inherits="WebProje.MainMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        #form1 {
+            background-color: #99D9EA;
+            height: 204px;
+            width: 1523px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <br />
+        <asp:ImageMap ID="ImageMap1" runat="server" HotSpotMode="Navigate" ImageUrl="~/Image/Logo.png">
+            <asp:RectangleHotSpot Bottom="108" Left="485" NavigateUrl="~/Hakkinda.aspx" Right="625" Top="85" />
+            <asp:RectangleHotSpot Bottom="108" Left="735" NavigateUrl="~/Urunler.aspx" Right="850" Top="85" />
+            <asp:RectangleHotSpot Bottom="108" Left="945" NavigateUrl="~/Iletisim.aspx" Right="1025" Top="85" />
+            <asp:RectangleHotSpot Bottom="108" Left="1105" NavigateUrl="~/Giris.aspx" Right="1155" Top="85" />
+            <asp:RectangleHotSpot Bottom="115" NavigateUrl="~/index.aspx" Right="210" Top="20" />
+        </asp:ImageMap>
+        <asp:AdRotator ID="AdRotator1" runat="server" AdvertisementFile="~/XMLFile2.xml" Height="100px" Width="100px" />
+    </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
